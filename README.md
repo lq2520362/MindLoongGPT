@@ -56,15 +56,17 @@
 
 ### 1. 🛠️ 环境配置
 
-- MotionGPT 环境 (用于生成 NPZ 动作数据集)
+- MotionGPT 环境
 
 ```bash
 git clone https://github.com/OpenMotionLab/MotionGPT
 ```
 
+将script/loong_fit.py 拷贝到 motiongpt文件夹
+
 环境安装请参考MotionGPT
 
-- MindLoongGPT 环境 (用于动作重定向处理)
+- MindLoongGPT 环境
 
 ```bash
 # 创建并激活虚拟环境
@@ -86,7 +88,6 @@ pip install -e .
       |-- SMPL_python_v.1.1.0.zip
 ```
 ```
-
   |-- smpl
       |-- SMPL_python_v.1.1.0
         |-- models
@@ -138,8 +139,8 @@ python demo.py \
 
 ```bash
 cd motiongpt
-python -m fit \
-  --dir /path/to/input_npy_files \  # 输入npy文件目录
+python loong_fit.py \
+  --dir /path/to/input_npy_files \  # 上一步输出文件目录
   --save_folder /path/to/output_smpl \  # 输出目录
   --cuda
 ```
@@ -149,14 +150,11 @@ python -m fit \
 - 重定向到青龙机器人阶段
 
 ```bash
-cd MotionGPT
-python -m fit \
-  --dir /path/to/input_npy_files \  # 输入npy文件目录
-  --save_folder /path/to/output_smpl \  # 输出目录
-  --cuda
+cd MindLoongGPT
+python script/retarget/smpl/grad_fit_openloong.py
 ```
 
-输入是 xx_out.npy（frame,22,3），输出是重定向后的npz
+输入是npz文件，输出是重定向后的pkl文件
 
 
 ### 3. 📂 核心脚本说明
@@ -170,11 +168,12 @@ python -m fit \
 
 - 可视化脚本在`script/vis`文件夹下：
 
-3. `vis_SMPLVertices.py`用于可视化 SMPL 匹配效果和动画。
-4. `vis_RetargetedResult.py`用于可视化重定向结果中各关节数据。
-5. `vis_mujoco.py`用于在 mujoco 仿真 csv 的运动数据。
-6. `vis_isaacgym.py`用于在 isaac gym 仿真 csv 的运动数据。
-7. `vis_motion_openloong.py`用于在 isaac gym 仿真 SMPL 的 pkl 的运动数据。
+1. `vis_MotionGPT.py`用于可视化 MotionGPT 生成的原始动作。
+2. `vis_SMPLVertices.py`用于可视化 SMPL 匹配效果和动画。
+3. `vis_RetargetedResult.py`用于可视化重定向结果中各关节数据。
+4. `vis_mujoco.py`用于在 mujoco 仿真 csv 的运动数据。
+5. `vis_isaacgym.py`用于在 isaac gym 仿真 csv 的运动数据。
+6. `vis_motion_openloong.py`用于在 isaac gym 仿真 SMPL 的 pkl 的运动数据。
 
 ## 📚 文献引用
 
