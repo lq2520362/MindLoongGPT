@@ -1,0 +1,3 @@
+[submodule "motiongpt"]
+	path = motiongpt
+	url = https://github.com/OpenMotionLab/MotionGPT.git
