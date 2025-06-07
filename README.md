@@ -16,9 +16,9 @@
 
 | 仿真效果                        |
 |:------------------------------:|
-|  <img src="./assets/images/simulation.gif" alt="Simulation" style="width: auto; height: 400;">|
+|  <img src="./assets/images/simulation.gif" alt="Simulation" width=400>|
 |**实机运行** | 
-| <img src="./assets/images/real.gif" alt="Real Robot" style="width: auto; height: 400;"> |
+| <img src="./assets/images/real.gif" alt="Real Robot" width=400> |
 ## ✨ 核心优势
 
 ### 1. 🎨 多模态交互
@@ -48,13 +48,13 @@
 ## 📅 里程碑
 
 <div align="center">
-  <img src="./assets/images/milestone.png" alt="项目里程碑" style="width: 400; height: auto;">
+  <img src="./assets/images/milestone.png" alt="项目里程碑" width=400>
 </div>
 
 - **2025/05/29** - 国地中心与复旦大学联合发布全球首款生成式人形机器人运动大模型"龙跃"(MindLoongGPT)
 
 <div align="center">
-  <img src="./assets/images/stage.jpg" alt="阶段" style="width: 100; height: auto;">
+  <img src="./assets/images/stage.jpg" alt="阶段" width=300>
 </div>
 
 ## 🚀 快速开始
@@ -122,11 +122,11 @@ pip install -e .
 - 项目中只有demo数据，完整数据集在huggingface上，包括AMASS数据集和自采集数据：
   - [AMASS数据集：](https://huggingface.co/datasets/OpenLoong/Public_Retargeted)
       <div align="center">
-        <img src="./assets/images/retarget.gif" style="width: 200; height: auto;" />
+        <img src="./assets/images/retarget.gif" width=400/>
       </div>
   - [自采集数据集：](https://huggingface.co/datasets/OpenLoong/mocap_dataes)
       <div align="center">
-        <img src="./assets/images/motion_capture.gif" style="width: 200; height: auto;"/>
+        <img src="./assets/images/motion_capture.gif" width=400>
       </div>
 
 ### 2. 📚 基本使用指南
