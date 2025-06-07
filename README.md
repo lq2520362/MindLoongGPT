@@ -54,7 +54,7 @@
 - **2025/05/29** - 国地中心与复旦大学联合发布全球首款生成式人形机器人运动大模型"龙跃"(MindLoongGPT)
 
 <div align="center">
-  <img src="./assets/images/stage.jpg" alt="阶段" style="width: 200; height: auto;">
+  <img src="./assets/images/stage.jpg" alt="阶段" style="width: 100; height: auto;">
 </div>
 
 ## 🚀 快速开始
